@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conversor de Medida</title>
+	<script src="conv.js"></script>
+</head>
+<body>
+
+	<h1>Conversor de Medidas</h1>
+
+	<button id="btn" onclick="minhaFuncao()">Clique aqui</button>
+
+	<div id="metro"></div>
+
+	<div id="res"></div>
+
+	<script>
+		
+		function minhaFuncao(){
+			let m = prompt('Digite a distância em metros(m):');
+
+				let km = (m/1000).toFixed(3);
+				let hm = (m/100).toFixed(3);
+				let dam = (m/10).toFixed(3);
+				let dm = (m*10);
+				let cm = (m*100);
+				let mm = (m*1000);
+
+			metro.innerHTML = '<h2>A distância em '+m+' metros, corresponde a... <h2><hr>'
+
+			res.innerHTML = '<p> '+km+' Quilômetros(km)<br>' +hm+' Hectômetro (Hm)<br>'+dam+' Decâmetro (Dam)<br>'+dm+' Decímetro (dm)<br> '+cm+' Centimetro (cm)<br> '+mm+' Milímetro (mm)<p>'
+}
+		
+	</script>
+
+</body>
+</html>
